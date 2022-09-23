@@ -1,0 +1,24 @@
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 370px;
+    height: 294px;
+    padding: 63px 24px;
+
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    transition: transform var(--transition-time-end-timing);
+
+    .project-list__link:hover &,
+    .project-list__link:focus & {
+        transform: translateY(0%);
+    }
+}
+
+.overlay__label {
+    @include font(400, 18px, 28px);
+    color: var(--primary-page-color);
+}

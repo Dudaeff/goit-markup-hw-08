@@ -1,0 +1,23 @@
+.logo {
+    display: block;
+
+    font-family: var(--logo-font-text);
+    @include font(700, 26px, 31px);
+    color: var(--accent-color);
+}
+
+.page-header__logo {
+    margin-right: 93px;
+}
+
+.page-header__logo_black-text {
+    color: var(--accent-second-color);
+}
+
+.page-footer__logo {
+    margin-bottom: 20px;
+}
+
+.page-footer__logo_white-text {
+    color: var(--primary-page-color);
+}

@@ -1,0 +1,20 @@
+.button {
+  font-family: inherit;
+  @include font(700, 16px, 30px);
+  letter-spacing: 0.06em;
+  color: var(--primary-page-color);
+  
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  
+  transition: background-color var(--transition-time-end-timing),
+    box-shadow var(--transition-time-end-timing);
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: var(--accent-active-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+}

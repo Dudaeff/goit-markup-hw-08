@@ -1,0 +1,11 @@
+@mixin centered ($disp: flex, $jc: center, $ai: center) {
+    display: $disp;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin font ($fw, $fs, $lh) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh/$fs;
+}

@@ -1,0 +1,32 @@
+.customers__header {
+    @extend %sections-header;
+}
+
+.customers__list {
+    display: flex;
+    column-gap: 30px;
+}
+
+.customers__list-item {
+    width: 170px;
+    height: 92px;
+}
+
+.customers__link {
+    @include centered;
+    width: 100%;
+    height: 100%;
+
+    color: var(--icon-fill);
+    border: 1px solid var(--icon-fill);
+    border-radius: 4px;
+    fill: currentColor;
+    transition: color var(--transition-time-end-timing),
+    border-color var(--transition-time-end-timing);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+}

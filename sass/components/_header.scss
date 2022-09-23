@@ -1,0 +1,40 @@
+.page-header {
+    border-bottom: 1px solid var(--line-shadow-color);
+}
+
+.page-header__container {
+    display: flex;
+    align-items: center;
+}
+
+.page-header__contact {
+    display: flex;
+    margin-left: auto;
+    column-gap: 30px;
+}
+
+.page-header__item_width-email {
+    width: 161px;
+}
+
+.page-header__item_width-tell {
+    width: 142px;
+}
+
+.page-header__contacts-link {
+    @include centered(flex, space-between, center);
+    padding: 32px 0;
+
+    @include font(500, 14px, 16px);
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+
+    fill: currentColor;
+    transition: color var(--transition-time-end-timing);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
