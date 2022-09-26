@@ -1,40 +1,108 @@
-.page-header {
-    border-bottom: 1px solid var(--line-shadow-color);
-}
-
-.page-header__container {
-    display: flex;
-    align-items: center;
+.page-header__menu {
+    display: none;
 }
 
 .page-header__contact {
-    display: flex;
-    margin-left: auto;
-    column-gap: 30px;
+    display: none;
 }
 
-.page-header__item_width-email {
-    width: 161px;
+@media screen and (max-width:767px) {
+    .page-header__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .page-header {
+        padding-top: 10px;
+        padding-bottom: 9px;
+        border-bottom: 1px solid var(--line-shadow-color);
+    }
+
+    .page-header__btn {
+        background-color: transparent;
+        line-height: 0;
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .page-header__icon-burger {
+        width: 40px;
+        height: 40px;
+    }
 }
 
-.page-header__item_width-tell {
-    width: 142px;
+@media screen and (min-width:768px) {
+    .page-header__btn {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .page-header__menu {
+        display: block;
+    }
+
+    .page-header__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .page-header__contact {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .page-header__item_width-email {
+        width: 138px;
+    }
+
+    .page-header__item_width-tell {
+        width: 123px;
+    }
+
+    .page-header__contacts-link {
+        @include centered(flex, space-between, center);
+
+        @include font(500, 12px, 14px);
+        letter-spacing: 0.02em;
+        color: var(--text-color);
+
+        fill: currentColor;
+        transition: color var(--transition-time-end-timing);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
 }
 
-.page-header__contacts-link {
+@media screen and (min-width:1200px) {
+    .page-header__contact {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        column-gap: 30px;
+    }
+
+    .page-header__item_width-email {
+        width: 161px;
+    }
+
+    .page-header__item_width-tell {
+        width: 142px;
+    }
+
+    .page-header__contacts-link {
     @include centered(flex, space-between, center);
     padding: 32px 0;
 
     @include font(500, 14px, 16px);
-    letter-spacing: 0.02em;
-    color: var(--text-color);
-
-    fill: currentColor;
-    transition: color var(--transition-time-end-timing);
-
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
+  }
 }
-

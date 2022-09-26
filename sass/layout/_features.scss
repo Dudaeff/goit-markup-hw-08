@@ -1,6 +1,6 @@
 .features__thumb {
     @include centered;
-    width: 270px;
+    width: 100%;
     height: 120px;
     margin-bottom: 30px;
 
@@ -10,11 +10,12 @@
 
 .features__list {
     display: flex;
-    column-gap: 30px;
+    flex-direction: column;
+    row-gap:30px;
 }
 
 .features__item {
-    width: 270px;
+    width: 100%;
 }
 
 .features__label {
@@ -22,10 +23,47 @@
 
     @include font(700, 14px, 16px);
     text-transform: uppercase;
+    text-align: center;
     color: var(--headers-and-names-color);
 }
 
 .features__description {
     @include font(400, 14px, 24px);
     color: var(--text-color);
+}
+
+@media screen and (min-width:768px) {
+    .features__comtainer {
+       padding: 0;
+    }
+
+    .features__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .features__item {
+      width: 354px;
+    }
+
+    .features__label {
+      text-align: start;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    .features__comtainer {
+        padding:0 15px;
+    }
+
+    .features__list {
+        column-gap: 30px;
+    }
+
+    .features__item {
+        width: 270px;
+    }
 }

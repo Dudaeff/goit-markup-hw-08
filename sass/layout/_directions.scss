@@ -1,9 +1,18 @@
+@media screen and (max-width:1199px) {
+    .directions {
+        display: none;
+    }
+}
+
 .directions {
     padding-top: 0;
 }
 
-.directions__header{
-   @extend %sections-header;
+.directions__header {
+    @include font(700, 36px, 42px);
+    text-align: center;
+    color: var(--headers-and-names-color);
+    margin-bottom: 50px;
 }
 
 .directions__list {

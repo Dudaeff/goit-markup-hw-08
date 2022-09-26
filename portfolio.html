@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="uk">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +12,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/portfolio.min.css">
-
 </head>
 
 <body>
@@ -22,11 +20,10 @@
             <a class="logo page-header__logo link" href="./index.html">Web<span
                     class="page-header__logo_black-text">Studio</span>
             </a>
-            <nav>
+            <nav class="page-header__menu">
                 <ul class="menu">
                     <li class="list"><a class="menu__link link" href="./index.html">Студія</a></li>
-                    <li class="list"><a class="menu__link menu__link_current link" href="./portfolio.html">Портфоліо</a>
-                    </li>
+                    <li class="list"><a class="menu__link menu__link_current link" href="./portfolio.html">Портфоліо</a></li>
                     <li class="list"><a class="menu__link link" href="">Контакти</a></li>
                 </ul>
             </nav>
@@ -46,10 +43,47 @@
                         +38 096 111 11 11</a>
                 </li>
             </ul>
+            <button type="button" class="page-header__btn js-open-menu">
+                <svg class="page-header__icon-burger" lang="en" aria-label="menu button">
+                    <use href="./images/sprite.svg#icon-burger"></use>
+                </svg>
+            </button>
         </div>
     </header>
+    <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu__container">
+            <button class="mobile-menu__btn js-close-menu">
+                <svg class="mobile-menu__icon-close" lang="en" aria-label="menu close button">
+                    <use href="./images/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <nav class="mobile-menu-nav">
+                <ul class="mobile-menu-nav__container">
+                    <li class="list"><a class="mobile-menu-nav__link link"
+                            href="./index.html">Студія</a></li>
+                    <li class="list"><a class="mobile-menu-nav__link mobile-menu-nav__link_current link" href="./portfolio.html">Портфоліо</a></li>
+                    <li class="list"><a class="mobile-menu-nav__link link" href="">Контакти</a></li>
+                </ul>
+            </nav>
+            <ul class="mobile-menu-contacts">
+                <li class="list">
+                    <a class="mobile-menu-contacts__tell link" href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
+                <li class="list">
+                    <a class="mobile-menu-contacts__email link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="mobile-menu-social">
+                <li class="mobile-menu-social__item list"><a class="mobile-menu-social__link link" href="">Instagram</a>
+                </li>
+                <li class="mobile-menu-social__item list"><a class="mobile-menu-social__link link" href="">Twitter</a></li>
+                <li class="mobile-menu-social__item list"><a class="mobile-menu-social__link link" href="">Facebook</a></li>
+                <li class="mobile-menu-social__item list"><a class="mobile-menu-social__link link" href="">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
 
-    <main>
+    <!-- <main>
         <h1 class="visually-hidden">Портфоліо</h1>
         <section class="section">
             <div class="container">
@@ -64,8 +98,18 @@
                     <li>
                         <a class="project-list__link link" href="">
                             <div class="project-list__thumb">
-                                <img src="./images/portfolio/tehnokryak.jpg"
-                                    alt="екран ноутбука з зображенням веб-сайту" width="370">
+                                <picture>
+                                    <source srcset="./images/portfolio/desk/desk_tehnokryak.webp 1x, ./images/portfolio/desk/desk_tehnokryak@2x.webp 2x" media="(min-width:1200px)"
+                                        type="image/webp">
+                                    <source srcset="./images/portfolio/tabl/tab_tehnokryak.webp 1x, ./images/portfolio/tabl/tab_tehnokryak@2x.webp 2x" media="(min-width:768px)"
+                                        type="image/webp">
+                                    <source srcset="./images/portfolio/mob/mob_tehnokryak.webp 1x, ./images/portfolio/mob/mob_tehnokryak@2x.webp 2x" media="(max-width:767px)"
+                                        type="image/webp">
+                                    <source srcset="./images/portfolio/desk/desk_tehnokryak.jpg 1x, ./images/portfolio/desk/desk_tehnokryak@2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="./images/portfolio/tabl/tab_tehnokryak.jpg 1x, ./images/portfolio/tabl/tab_tehnokryak@2x.jpg 2x" media="(min-width:768px)">
+                                    <source srcset="./images/portfolio/mob/mob_tehnokryak.jpg 1x, ./images/portfolio/mob/mob_tehnokryak@2x.jpg 2x" media="(max-width:767px)">
+                                    <img src="./images/portfolio/mob/mob_tehnokryak.jpg" alt="екран ноутбука з зображенням веб-сайту">
+                                </picture>
                                 <div class="overlay">
                                     <p class="overlay__label">Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це дозволить відвідувачу
@@ -82,8 +126,21 @@
                     <li>
                         <a class="project-list__link link" href="">
                             <div class="project-list__thumb">
-                                <img src="./images/portfolio/poster-orlean.jpg"
-                                    alt="двоє баскедболістів змагаються за перемогу" width="370">
+                                <picture>
+                                    <source srcset="./images/portfolio/desk/desk_poster-orlean.webp 1x, ./images/portfolio/desk/desk_poster-orlean@2x.webp 2x"
+                                        media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tabl/tab_poster-orlean.webp 1x, ./images/portfolio/tabl/tab_poster-orlean@2x.webp 2x"
+                                        media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/portfolio/mob/mob_poster-orlean.webp 1x, ./images/portfolio/mob/mob_poster-orlean@2x.webp 2x"
+                                        media="(max-width:767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desk/desk_poster-orlean.jpg 1x, ./images/portfolio/desk/desk_poster-orlean@2x.jpg 2x"
+                                        media="(min-width:1200px)">
+                                    <source srcset="./images/portfolio/tabl/tab_poster-orlean.jpg 1x, ./images/portfolio/tabl/tab_poster-orlean@2x.jpg 2x"
+                                        media="(min-width:768px)">
+                                    <source srcset="./images/portfolio/mob/mob_poster-orlean.jpg 1x, ./images/portfolio/mob/mob_poster-orlean@2x.jpg 2x"
+                                        media="(max-width:767px)">
+                                        <img src="./images/portfolio/mob/mob_poster-orlean.jpg" alt="двоє баскедболістів змагаються за перемогу">
+                                </picture>
                                 <div class="overlay">
                                     <p class="overlay__label">Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це
@@ -101,7 +158,22 @@
                     <li>
                         <a class="project-list__link link" href="">
                             <div class="project-list__thumb">
-                                <img src="./images/portfolio/restoran.jpg" alt="риба логотип морської їжі" width="370">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/desk/desk_restoran.webp 1x, ./images/portfolio/desk/desk_restoran@2x.webp 2x"
+                                        media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tabl/tab_restoran.webp 1x, ./images/portfolio/tabl/tab_restoran@2x.webp 2x"
+                                        media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/portfolio/mob/mob_restoran.webp 1x, ./images/portfolio/mob/mob_restoran@2x.webp 2x"
+                                        media="(max-width:767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desk/desk_restoran.jpg 1x, ./images/portfolio/desk/desk_restoran@2x.jpg 2x"
+                                        media="(min-width:1200px)">
+                                    <source srcset="./images/portfolio/tabl/tab_restoran.jpg 1x, ./images/portfolio/tabl/tab_restoran@2x.jpg 2x"
+                                        media="(min-width:768px)">
+                                    <source srcset="./images/portfolio/mob/mob_restoran.jpg 1x, ./images/portfolio/mob/mob_restoran@2x.jpg 2x"
+                                        media="(max-width:767px)">
+                                        <img src="./images/portfolio/mob/mob_restoran.jpg" alt="логотип морської їжі риба">
+                                </picture>
                                 <div class="overlay">
                                     <p class="overlay__label">Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це
@@ -119,7 +191,21 @@
                     <li>
                         <a class="project-list__link link" href="">
                             <div class="project-list__thumb">
-                                <img src="./images/portfolio/prime-proj.jpg" alt="навушники" width="370">
+                                <picture>
+                                    <source srcset="./images/portfolio/desk/desk_prime-proj.webp 1x, ./images/portfolio/desk/desk_prime-proj@2x.webp 2x"
+                                        media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tabl/tab_prime-proj.webp 1x, ./images/portfolio/tabl/tab_prime-proj@2x.webp 2x"
+                                        media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/portfolio/mob/mob_prime-proj.webp 1x, ./images/portfolio/mob/mob_prime-proj@2x.webp 2x"
+                                        media="(max-width:767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desk/desk_prime-proj.jpg 1x, ./images/portfolio/desk/desk_prime-proj@2x.jpg 2x"
+                                        media="(min-width:1200px)">
+                                    <source srcset="./images/portfolio/tabl/tab_prime-proj.jpg 1x, ./images/portfolio/tabl/tab_prime-proj@2x.jpg 2x"
+                                        media="(min-width:768px)">
+                                    <source srcset="./images/portfolio/mob/mob_prime-proj.jpg 1x, ./images/portfolio/mob/mob_prime-proj@2x.jpg 2x"
+                                        media="(max-width:767px)">
+                                        <img src="./images/portfolio/mob/mob_prime-proj.jpg" alt="навушники">
+                                </picture>
                                 <div class="overlay">
                                     <p class="overlay__label">Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це
@@ -137,8 +223,21 @@
                     <li>
                         <a class="project-list__link link" href="">
                             <div class="project-list__thumb">
-                                <img src="./images/portfolio/proj-boxes.jpg" alt="дві коробочки на білому фоні"
-                                    width="370">
+                                <picture>
+                                    <source srcset="./images/portfolio/desk/desk_proj-boxes.webp 1x, ./images/portfolio/desk/desk_proj-boxes@2x.webp 2x"
+                                        media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tabl/tab_proj-boxes.webp 1x, ./images/portfolio/tabl/tab_proj-boxes@2x.webp 2x"
+                                        media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/portfolio/mob/mob_proj-boxes.webp 1x, ./images/portfolio/mob/mob_proj-boxes@2x.webp 2x"
+                                        media="(max-width:767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desk/desk_proj-boxes.jpg 1x, ./images/portfolio/desk/desk_proj-boxes@2x.jpg 2x"
+                                        media="(min-width:1200px)">
+                                    <source srcset="./images/portfolio/tabl/tab_proj-boxes.jpg 1x, ./images/portfolio/tabl/tab_proj-boxes@2x.jpg 2x"
+                                        media="(min-width:768px)">
+                                    <source srcset="./images/portfolio/mob/mob_proj-boxes.jpg 1x, ./images/portfolio/mob/mob_proj-boxes@2x.jpg 2x"
+                                        media="(max-width:767px)">
+                                        <img src="./images/portfolio/mob/mob_proj-boxes.jpg" alt=",біла та коричнева коробочка з тінню на білому фоні">
+                                </picture>
                                 <div class="overlay">
                                     <p class="overlay__label">Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це
@@ -156,7 +255,21 @@
                     <li>
                         <a class="project-list__link link" href="">
                             <div class="project-list__thumb">
-                                <img src="./images/portfolio/inspiration.jpg" alt="монітор з веб-сайтом" width="370">
+                                <picture>
+                                    <source srcset="./images/portfolio/desk/desk_inspiration.webp 1x, ./images/portfolio/desk/desk_inspiration@2x.webp 2x"
+                                        media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tabl/tab_inspiration.webp 1x, ./images/portfolio/tabl/tab_inspiration@2x.webp 2x"
+                                        media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/portfolio/mob/mob_inspiration.webp 1x, ./images/portfolio/mob/mob_inspiration@2x.webp 2x"
+                                        media="(max-width:767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desk/desk_inspiration.jpg 1x, ./images/portfolio/desk/desk_inspiration@2x.jpg 2x"
+                                        media="(min-width:1200px)">
+                                    <source srcset="./images/portfolio/tabl/tab_inspiration.jpg 1x, ./images/portfolio/tabl/tab_inspiration@2x.jpg 2x"
+                                        media="(min-width:768px)">
+                                    <source srcset="./images/portfolio/mob/mob_inspiration.jpg 1x, ./images/portfolio/mob/mob_inspiration@2x.jpg 2x"
+                                        media="(max-width:767px)">
+                                        <img src="./images/portfolio/mob/mob_inspiration.jpg" alt="монітор з веб-сайтом">
+                                </picture>
                                 <div class="overlay">
                                     <p class="overlay__label">Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це
@@ -174,7 +287,21 @@
                     <li>
                         <a class="project-list__link link" href="">
                             <div class="project-list__thumb">
-                                <img src="./images/portfolio/limited-edition.jpg" alt="розгорнута книга" width="370">
+                                <picture>
+                                    <source srcset="./images/portfolio/desk/desk_limited-edition.webp 1x, ./images/portfolio/desk/desk_limited-edition@2x.webp 2x"
+                                        media="(min-width:1200px)" type="image/webp">
+                                    <source srcset="./images/portfolio/tabl/tab_limited-edition.webp 1x, ./images/portfolio/tabl/tab_limited-edition@2x.webp 2x"
+                                        media="(min-width:768px)" type="image/webp">
+                                    <source srcset="./images/portfolio/mob/mob_limited-edition.webp 1x, ./images/portfolio/mob/mob_limited-edition@2x.webp 2x"
+                                        media="(max-width:767px)" type="image/webp">
+                                    <source srcset="./images/portfolio/desk/desk_limited-edition.jpg 1x, ./images/portfolio/desk/desk_limited-edition@2x.jpg 2x"
+                                        media="(min-width:1200px)">
+                                    <source srcset="./images/portfolio/tabl/tab_limited-edition.jpg 1x, ./images/portfolio/tabl/tab_limited-edition@2x.jpg 2x"
+                                        media="(min-width:768px)">
+                                    <source srcset="./images/portfolio/mob/mob_limited-edition.jpg 1x, ./images/portfolio/mob/mob_limited-edition@2x.jpg 2x"
+                                        media="(max-width:767px)">
+                                        <img src="./images/portfolio/mob/mob_limited-edition.jpg" alt="розгорнута книга">
+                                </picture>
                                 <div class="overlay">
                                     <p class="overlay__label">Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це
@@ -192,7 +319,26 @@
                     <li>
                         <a class="project-list__link link" href="">
                             <div class="project-list__thumb">
-                                <img src="./images/portfolio/lab.jpg" alt="бірка з надписом лаб ель таг" width="370">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/desk/desk_label.webp 1x, ./images/portfolio/desk/desk_label@2x.webp 2x"
+                                        media="(min-width:1200px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/tabl/tab_label.webp 1x, ./images/portfolio/tabl/tab_label@2x.webp 2x"
+                                        media="(min-width:768px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/mob/mob_label.webp 1x, ./images/portfolio/mob/mob_label@2x.webp 2x"
+                                        media="(max-width:767px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/desk/desk_label.jpg 1x, ./images/portfolio/desk/desk_label@2x.jpg 2x"
+                                        media="(min-width:1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tabl/tab_label.jpg 1x, ./images/portfolio/tabl/tab_label@2x.jpg 2x"
+                                        media="(min-width:768px)">
+                                    <source srcset="./images/portfolio/mob/mob_label.jpg 1x, ./images/portfolio/mob/mob_label@2x.jpg 2x"
+                                        media="(max-width:767px)">
+                                        <img src="./images/portfolio/mob/mob_label.jpg" alt="бірка з надписом лейбел тег">
+                                </picture>
                                 <div class="overlay">
                                     <p class="overlay__label">Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це
@@ -210,8 +356,26 @@
                     <li>
                         <a class="project-list__link link" href="">
                             <div class="project-list__thumb">
-                                <img src="./images/portfolio/growing-bussines.jpg"
-                                    alt="робота за ноутбуком в додатку бізнесу" width="370">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/desk/desk_growing-bussines.webp 1x, ./images/portfolio/desk/desk_growing-bussines@2x.webp 2x"
+                                        media="(min-width:1200px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/tabl/tab_growing-bussines.webp 1x, ./images/portfolio/tabl/tab_growing-bussines@2x.webp 2x"
+                                        media="(min-width:768px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/mob/mob_growing-bussines.webp 1x, ./images/portfolio/mob/mob_growing-bussines@2x.webp 2x"
+                                        media="(max-width:767px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/desk/desk_growing-bussines.jpg 1x, ./images/portfolio/desk/desk_growing-bussines@2x.jpg 2x"
+                                        media="(min-width:1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tabl/tab_growing-bussines.jpg 1x, ./images/portfolio/tabl/tab_growing-bussines@2x.jpg 2x"
+                                        media="(min-width:768px)">
+                                    <source srcset="./images/portfolio/mob/mob_growing-bussines.jpg 1x, ./images/portfolio/mob/mob_growing-bussines@2x.jpg 2x"
+                                        media="(max-width:767px)">
+                                        <img src="./images/portfolio/mob/mob_growing-bussines.jpg" alt="робота за ноутбуком в додатку бізнесу">
+                                </picture>
                                 <div class="overlay">
                                     <p class="overlay__label">Ресурс пропонує комплексні пропозиції з різним рівнем
                                         функціоналу та сервісів. Все це
@@ -229,25 +393,25 @@
                 </ul>
             </div>
         </section>
-    </main>
+    </main> -->
 
     <footer class="page-footer">
         <div class="page-footer__container container">
-            <div class="page-footer__address_width">
+            <div class="page-footer__address_container">
                 <a class="logo page-footer__logo link" href="./index.html">Web<span
                         class="page-footer__logo_white-text">Studio</span>
                 </a>
                 <address>
-                    <ul class="list">
-                        <li class="page-footer__address-items">
+                    <ul class="page-footer__address list">
+                        <li>
                             <a class="page-footer__address-link link" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
                                 target="_blank" rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі
                                 Українки, 26</a>
                         </li>
-                        <li class="page-footer__address-items">
+                        <li>
                             <a class="page-footer__contacts link" href="mailto:info@example.com">info@example.com</a>
                         </li>
-                        <li class="page-footer__address-items">
+                        <li>
                             <a class="page-footer__contacts link" href="tel:+380991111111">+38 099 111
                                 11 11</a>
                         </li>
@@ -301,6 +465,8 @@
             </form>
         </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

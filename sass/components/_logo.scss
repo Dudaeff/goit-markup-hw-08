@@ -1,13 +1,15 @@
 .logo {
-    display: block;
+    display: flex;
 
     font-family: var(--logo-font-text);
-    @include font(700, 26px, 31px);
+    @include font(700, 24px, 28px);
     color: var(--accent-color);
 }
 
-.page-header__logo {
-    margin-right: 93px;
+@media screen and (min-width:1200px) {
+    .page-header__logo {
+        margin-right: 93px;
+    }
 }
 
 .page-header__logo_black-text {

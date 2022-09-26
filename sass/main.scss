@@ -1,7 +1,6 @@
 @import './utils/variables';
 @import './utils/visually-hidden';
 @import './utils/mixins';
-@import './utils/placeholder';
 
 @import './base/reset';
 @import './base/container';
@@ -10,6 +9,7 @@
 @import './components/header';
 @import './components/logo';
 @import './components/menu';
+@import './components/mobile-menu';
 @import './components/current';
 @import './components/button-submit';
 @import './components/subscription-form';
