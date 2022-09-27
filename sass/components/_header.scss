@@ -6,6 +6,10 @@
     display: none;
 }
 
+.page-header {
+    border-bottom: 1px solid var(--line-shadow-color);
+}
+
 @media screen and (max-width:767px) {
     .page-header__container {
         @include centered( flex, space-between);
@@ -14,10 +18,8 @@
     .page-header {
         padding-top: 10px;
         padding-bottom: 9px;
-
-        border-bottom: 1px solid var(--line-shadow-color);
     }
-
+ 
     .page-header__btn {
         background-color: transparent;
         line-height: 0;

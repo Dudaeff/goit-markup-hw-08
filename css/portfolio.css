@@ -115,6 +115,10 @@ button {
   display: none;
 }
 
+.page-header {
+  border-bottom: 1px solid var(--line-shadow-color);
+}
+
 @media screen and (max-width: 767px) {
   .page-header__container {
     display: flex;
@@ -124,7 +128,6 @@ button {
   .page-header {
     padding-top: 10px;
     padding-bottom: 9px;
-    border-bottom: 1px solid var(--line-shadow-color);
   }
   .page-header__btn {
     background-color: transparent;
@@ -414,6 +417,22 @@ button {
   color: var(--primary-page-color);
 }
 
+@media screen and (max-width: 350px) {
+  .overlay {
+    padding: 15%;
+  }
+  .overlay__label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4285714286;
+    color: var(--primary-page-color);
+  }
+}
+@media screen and (max-width: 430px) {
+  .overlay {
+    padding: 5%;
+  }
+}
 @media screen and (min-width: 768px) {
   .overlay {
     padding-top: 49px;

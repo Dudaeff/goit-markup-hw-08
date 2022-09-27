@@ -103,7 +103,8 @@
 }
 
 .form__check-field {
-    @include centered;
+    display: inline-flex;
+    align-items: center;
     
     @include font(400, 12px, 14px);
     color: var(--text-color);
@@ -173,7 +174,13 @@
 }
 
 @media screen and (min-width:1200px) {
+    .form {
+        width: 448px;
+    }
+
     .form__check-field {
+        @include centered;
+
         @include font(400, 14px, 24px);
     }
 }

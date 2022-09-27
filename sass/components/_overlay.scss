@@ -24,6 +24,24 @@
     color: var(--primary-page-color);
 }
 
+@media screen and (max-width:350px) {
+    .overlay {
+        padding: 15%;
+    }
+
+    .overlay__label {
+        @include font(400, 14px, 20px);
+        color: var(--primary-page-color);
+    }
+}
+
+@media screen and (max-width:430px) {
+    .overlay {
+        padding: 5%;
+    }
+}
+
+
 @media screen and (min-width:768px) {
     .overlay {
         padding-top: 49px;
