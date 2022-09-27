@@ -1,3 +1,20 @@
+@media screen and (max-width:479px) {
+    .form__check-field {
+        flex-wrap: wrap;
+        row-gap: 5px;
+    }
+
+    .form__btn {
+        padding: 10px 26px;
+    }
+}
+
+@media screen and (min-width:480px) {
+    .form__btn {
+        padding: 10px 52px;
+    }
+}
+
 .form__title {
     margin-bottom: 12px;
 
@@ -145,10 +162,6 @@
         color: var(--accent-active-color);
         text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
     }
-}
-
-.form__btn {
-    padding: 10px 52px;
 }
 
 @media screen and (min-width:1200px) {

@@ -4,8 +4,9 @@
     gap: 30px;
 }
 
+
 .project-list__link {
-    display: block;
+    height: 100%;
     transition: box-shadow var(--transition-time-end-timing);
 
     &:hover,
@@ -22,9 +23,10 @@
 }
 
 .project-list__card {
-    padding: 19px 24px;
+    padding: 20px 24px;
     border: 1px solid var(--project-border-color);
     border-top: none;
+    flex-grow: 1;
 }
 
 .project-list__heading {
@@ -40,4 +42,15 @@
     font-family: inherit;
     @include font(400, 16px, 30px);
     color: var(--text-color);
+}
+
+@media screen and (min-width:768px) {
+    .project-list__link {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project__container {
+        padding: 0;
+    }
 }

@@ -6,7 +6,7 @@
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(/images/hero-images/mobile-hero.jpg);   
+        url(../images/hero-images/mobile-hero.jpg);   
 }
     
 @media screen and (min-device-pixel-ratio:2) and (max-width:767px),
@@ -15,7 +15,7 @@
     .hero {
     background-image: linear-gradient(to right,
         rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)), url(/images/hero-images/mobile-hero@2x.jpg);
+        rgba(47, 48, 58, 0.4)), url(../images/hero-images/mobile-hero@2x.jpg);
     }
 }
 
@@ -37,7 +37,7 @@
     .hero {
     background-image: linear-gradient(to right,
         rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)), url(/images/hero-images/tablet-hero.jpg);
+        rgba(47, 48, 58, 0.4)), url(../images/hero-images/tablet-hero.jpg);
     }
 
     @media screen and (min-device-pixel-ratio:2) and (min-width:768px),
@@ -46,7 +46,7 @@
         .hero {
         background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)), url(/images/hero-images/tablet-hero@2x.jpg);
+            rgba(47, 48, 58, 0.4)), url(../images/hero-images/tablet-hero@2x.jpg);
         }
     }
 
@@ -58,10 +58,11 @@
 @media screen and (min-width:1200px) {
     .hero {
     padding: 200px 0;
+    margin: 0 auto;
     max-width: 1600px;
     background-image: linear-gradient(to right,
         rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)), url(/./images/hero-images/desktop-hero.jpg);
+        rgba(47, 48, 58, 0.4)), url(../images/hero-images/desktop-hero.jpg);
     }
 
     @media screen and (min-device-pixel-ratio:2) and (min-width:768px),
@@ -71,7 +72,7 @@
         .hero {
          background-image: linear-gradient(to right,
          rgba(47, 48, 58, 0.4),
-         rgba(47, 48, 58, 0.4)), url(/./images/hero-images/desktop-hero@2x.jpg);
+         rgba(47, 48, 58, 0.4)), url(../images/hero-images/desktop-hero@2x.jpg);
         }
     }
 
@@ -81,5 +82,9 @@
 
     .hero__container {
         max-width: 696px;
+    }
+
+    .hero__btn {
+        padding: 10px 32px;
     }
 }
