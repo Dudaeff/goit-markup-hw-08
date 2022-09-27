@@ -19,12 +19,12 @@
 }
 
 .features__label {
-    margin-bottom: 10px;
-
     @include font(700, 14px, 16px);
     text-transform: uppercase;
     text-align: center;
     color: var(--headers-and-names-color);
+    
+    margin-bottom: 10px;
 }
 
 .features__description {
@@ -56,7 +56,7 @@
 @media screen and (min-width:1200px) {
 
     .features__comtainer {
-        padding:0 15px;
+        padding: 0 15px;
     }
 
     .features__list {

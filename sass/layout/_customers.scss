@@ -11,6 +11,7 @@
     @include font(700, 28px, 33px);
     text-align: center;
     color: var(--headers-and-names-color);
+    
     margin-bottom: 30px;
 }
 .customers__list {
@@ -32,7 +33,9 @@
     color: var(--icon-fill);
     border: 1px solid var(--icon-fill);
     border-radius: 4px;
+
     fill: currentColor;
+
     transition: color var(--transition-time-end-timing),
     border-color var(--transition-time-end-timing);
 

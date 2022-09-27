@@ -1,5 +1,6 @@
 .hero {
     padding: 118px 0;
+
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--bg-hero-color);
@@ -7,6 +8,16 @@
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
         url(../images/hero-images/mobile-hero.jpg);   
+}
+
+.hero__slogan {
+    @include font(900, 26px, 42px);
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--primary-page-color);
+
+    margin-bottom: 30px;
 }
     
 @media screen and (min-device-pixel-ratio:2) and (max-width:767px),
@@ -19,15 +30,6 @@
     }
 }
 
-.hero__slogan {
-    margin-bottom: 30px;
-    @include font(900, 26px, 42px);
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--primary-page-color);
-}
-
 .hero__btn {
     padding: 10px 24px;
 }
@@ -35,7 +37,7 @@
 
 @media screen and (min-width:768px) {
     .hero {
-    background-image: linear-gradient(to right,
+        background-image: linear-gradient(to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)), url(../images/hero-images/tablet-hero.jpg);
     }
@@ -44,14 +46,16 @@
     screen and (min-resolution:192dpi) and (min-width:768px),
     screen and (min-resolution:2dppx)and (min-width:768px) {
         .hero {
-        background-image: linear-gradient(to right,
+            background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)), url(../images/hero-images/tablet-hero@2x.jpg);
         }
     }
 
-    .hero__container {
-        max-width: 390px;
+    .hero__slogan {
+        max-width: 360px;
+        margin: 0 auto;
+        margin-bottom: 30px;
     }
 }
 
@@ -60,6 +64,7 @@
     padding: 200px 0;
     margin: 0 auto;
     max-width: 1600px;
+    
     background-image: linear-gradient(to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)), url(../images/hero-images/desktop-hero.jpg);
@@ -78,9 +83,6 @@
 
     .hero__slogan {
         @include font(900, 44px, 60px);
-    }
-
-    .hero__container {
         max-width: 696px;
     }
 

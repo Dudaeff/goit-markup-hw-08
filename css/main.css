@@ -115,11 +115,11 @@ button {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .page-header__container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
   }
   .page-header {
     padding-top: 10px;
@@ -151,12 +151,12 @@ button {
   .page-header__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
   .page-header__contact {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    margin-left: auto;
   }
   .page-header__item_width-email {
     width: 138px;
@@ -184,7 +184,6 @@ button {
   .page-header__contact {
     display: flex;
     flex-direction: row;
-    margin-left: auto;
     column-gap: 30px;
   }
   .page-header__item_width-email {
@@ -197,10 +196,10 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px 0;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.1428571429;
+    padding: 32px 0;
   }
 }
 .logo {
@@ -212,7 +211,17 @@ button {
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .page-header__logo {
+    margin-right: 87px;
+  }
+}
 @media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.1923076923;
+  }
   .page-header__logo {
     margin-right: 93px;
   }
@@ -288,9 +297,7 @@ button {
   }
   .mobile-menu__container {
     position: relative;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-left: 40px;
+    padding: 48px 40px;
   }
   .mobile-menu__btn {
     position: absolute;
@@ -407,20 +414,20 @@ button {
 }
 .subscription-form__label {
   display: block;
-  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1428571429;
   text-transform: uppercase;
   text-align: center;
   color: var(--primary-page-color);
+  margin-bottom: 20px;
 }
 
 .subscription-form__field {
   width: 100%;
   height: 50px;
-  margin-bottom: 20px;
   padding-left: 15px;
+  margin-bottom: 20px;
   color: var(--primary-page-color);
   background-color: var(--bg-footer-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -482,6 +489,8 @@ button {
 
 .modal {
   position: relative;
+  width: 450px;
+  height: 609px;
   padding: 40px;
   background-color: var(--primary-page-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -508,20 +517,12 @@ button {
   fill: var(--accent-color);
 }
 
-@media screen and (max-width: 767px) {
-  .modal {
-    max-width: 450px;
-    margin: 0 auto;
-  }
-}
 @media screen and (min-width: 768px) {
   .modal {
     position: absolute;
     left: 50%;
     top: 50%;
     padding: 40px;
-    width: 528px;
-    height: 581px;
     background-color: var(--primary-page-color);
     transform: translate(-50%, -50%) translateY(0);
     transition: transform var(--transition-time-end-timing), visibility var(--transition-time-end-timing);
@@ -530,13 +531,10 @@ button {
     transform: translate(-50%, -50%) translateY(100%);
   }
 }
-@media screen and (max-width: 479px) {
-  .form__check-field {
-    flex-wrap: wrap;
-    row-gap: 5px;
-  }
-  .form__btn {
-    padding: 10px 26px;
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
   }
 }
 @media screen and (min-width: 480px) {
@@ -545,12 +543,12 @@ button {
   }
 }
 .form__title {
-  margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   color: var(--headers-and-names-color);
+  margin-bottom: 12px;
 }
 
 .form__field {
@@ -560,11 +558,11 @@ button {
 
 .form__label {
   display: block;
-  margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1666666667;
   letter-spacing: 0.01em;
+  margin-bottom: 4px;
 }
 
 .form__input {
@@ -630,11 +628,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1666666667;
   color: var(--text-color);
+  margin-bottom: 30px;
 }
 
 .form__own-checkbox {
@@ -675,6 +673,14 @@ button {
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (max-width: 479px) {
+  .form__check-field {
+    display: inline-block;
+  }
+  .form__btn {
+    padding: 10px 26px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .form__check-field {
     font-weight: 400;
@@ -692,14 +698,13 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 60px;
 }
 
 .page-footer__address_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 232px;
-  margin-bottom: 60px;
 }
 
 .page-footer__address {
@@ -735,19 +740,18 @@ button {
 }
 
 .page-footer__label {
-  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1428571429;
   text-transform: uppercase;
   text-align: center;
   color: var(--primary-page-color);
+  margin-bottom: 20px;
 }
 
 .page-footer__social-list {
   display: flex;
   column-gap: 10px;
-  margin-bottom: 60px;
 }
 
 .page-footer__social-list-item {
@@ -784,10 +788,11 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    row-gap: unset;
   }
   .page-footer__address_container {
-    margin-bottom: 0;
     align-items: flex-start;
+    margin-bottom: 0;
   }
   .page-footer__address {
     align-items: flex-start;
@@ -795,9 +800,6 @@ button {
   }
   .page-footer__label {
     text-align: start;
-  }
-  .page-footer__social-list {
-    margin-bottom: 0;
   }
 }
 .hero {
@@ -808,13 +810,7 @@ button {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-images/mobile-hero.jpg);
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
-  .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-images/mobile-hero@2x.jpg);
-  }
-}
 .hero__slogan {
-  margin-bottom: 30px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.6153846154;
@@ -822,8 +818,14 @@ button {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-page-color);
+  margin-bottom: 30px;
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-images/mobile-hero@2x.jpg);
+  }
+}
 .hero__btn {
   padding: 10px 24px;
 }
@@ -839,8 +841,10 @@ button {
   }
 }
 @media screen and (min-width: 768px) {
-  .hero__container {
-    max-width: 390px;
+  .hero__slogan {
+    max-width: 360px;
+    margin: 0 auto;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -861,10 +865,6 @@ button {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.3636363636;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .hero__container {
     max-width: 696px;
   }
 }
@@ -895,13 +895,13 @@ button {
 }
 
 .features__label {
-  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1428571429;
   text-transform: uppercase;
   text-align: center;
   color: var(--headers-and-names-color);
+  margin-bottom: 10px;
 }
 
 .features__description {
@@ -1013,21 +1013,21 @@ button {
 }
 
 .team__names {
-  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.1875;
   text-align: center;
   color: var(--headers-and-names-color);
+  margin-bottom: 10px;
 }
 
 .team__profession {
-  margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.1875;
   text-align: center;
   color: var(--text-color);
+  margin-bottom: 16px;
 }
 
 .team__social-list {

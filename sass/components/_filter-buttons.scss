@@ -4,17 +4,19 @@
         flex-wrap: wrap;
         column-gap: 8px;
         row-gap: 15px;
-        width: 326px;
+
+        max-width: 326px;
+
         margin-bottom: 40px;
     }
 }
 
 .filter__btn {
-    padding: 6px 22px;
-    
     @include font(500, 16px, 26px);
     text-align: center;
     color: var(--headers-and-names-color);
+
+    padding: 6px 22px;
 
     background-color: var(--secondary-page-color);
 
@@ -38,6 +40,7 @@
         display: flex;
         justify-content: center;
         column-gap: 8px;
+        
         margin-bottom: 30px;
     }
 }

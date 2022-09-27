@@ -10,6 +10,7 @@
         visibility: hidden;
         opacity: 0;
         pointer-events: none;
+
         transition: visibility var(--transition-time-end-timing);
     }
 
@@ -27,9 +28,8 @@
 
     .mobile-menu__container {
         position: relative;
-        padding-top: 48px;
-        padding-bottom: 48px;
-        padding-left: 40px;
+
+        padding: 48px 40px;
     }
     
     .mobile-menu__btn {
@@ -50,6 +50,7 @@
     .mobile-menu__icon-close {
         width:30px;
         height: 30px;
+
         transition: fill var(--transition-time-end-timing);
 
         .mobile-menu__btn:hover &,
@@ -82,6 +83,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 32px;
+
         margin-bottom: 64px;
     }
 
@@ -104,6 +106,7 @@
 
     .mobile-menu-social__item {
         padding-left: 10px;
+        
         &:not(:last-child) {
             padding-right: 10px;
             border-right: 1px solid rgba(33, 33, 33, 0.2);
