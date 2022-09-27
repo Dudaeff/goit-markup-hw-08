@@ -364,6 +364,7 @@ button {
   }
   .mobile-menu-social__item {
     padding-left: 10px;
+    padding-bottom: 5px;
   }
   .mobile-menu-social__item:not(:last-child) {
     padding-right: 10px;

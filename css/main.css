@@ -364,6 +364,7 @@ button {
   }
   .mobile-menu-social__item {
     padding-left: 10px;
+    padding-bottom: 5px;
   }
   .mobile-menu-social__item:not(:last-child) {
     padding-right: 10px;
@@ -489,7 +490,7 @@ button {
 
 .modal {
   position: relative;
-  width: 450px;
+  max-width: 450px;
   height: 609px;
   padding: 40px;
   background-color: var(--primary-page-color);
