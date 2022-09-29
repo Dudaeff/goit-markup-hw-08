@@ -10,6 +10,10 @@
     color: var(--headers-and-names-color);
     
     margin-bottom: 12px;
+
+    @media screen and (max-width:390px) {
+        font-size: 5vw;
+    }
 }
 
 .form__field {
@@ -110,6 +114,10 @@
     color: var(--text-color);
 
     margin-bottom: 30px;
+
+    @media screen and (max-width:390px) {
+        font-size: 3vw;
+    }
 }
 
 .form__own-checkbox {
@@ -163,13 +171,14 @@
     }
 }
 
-@media screen and (max-width:479px) {
+@media screen and (max-width:480px) {
     .form__check-field {
         display: inline-block;
     }
 
     .form__btn {
-        padding: 10px 26px;
+        padding: 1.8vw 10.5vw;
+        font-size: 3.2vw;
     }
 }
 

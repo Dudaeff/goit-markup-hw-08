@@ -33,6 +33,10 @@
         height: 100%;
 
         padding: 48px 40px;
+
+        @media screen and (max-width:440px) {
+           padding-left: 5vw;
+        }
     }
     
     .mobile-menu__btn {
@@ -76,6 +80,10 @@
         @include font(500, 40px, 47px);
         letter-spacing: 0.02em;
         color: var(--headers-and-names-color);
+
+        @media screen and (max-width:440px) {
+            font-size: 9vw;
+        }
     }
 
     .mobile-menu-nav__link_current {
@@ -94,17 +102,24 @@
         @include font (500, 34px, 40px);
         letter-spacing: 0.02em;
          color: var(--accent-color);
+
+        @media screen and (max-width:440px) {
+            font-size: 7.5vw;
+        }
     }
 
     .mobile-menu-contacts__email {
         @include font(500, 24px, 28px);
         letter-spacing: 0.02em;
         color: inherit;
+
+        @media screen and (max-width:440px) {
+            font-size: 5.5vw;
+        }
     }
 
     .mobile-menu-social {
         display: flex;
-        flex-wrap: wrap;
     }
 
     .mobile-menu-social__item {
@@ -115,12 +130,20 @@
             padding-right: 10px;
             border-right: 1px solid rgba(33, 33, 33, 0.2);
         }
+
+        &:nth-child(1) {
+            padding-left: 0;
+        }
     }
 
     .mobile-menu-social__link {
       @include font(500, 18px, 22px);
         letter-spacing: 0.02em;
         color: var(--accent-color);
+
+        @media screen and (max-width:440px) {
+            font-size: 4vw;
+        }
     }
 }
 
